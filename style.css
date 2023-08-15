@@ -1,0 +1,203 @@
+/******************************************************Général*************************************************************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+body {
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 5, 0.2);
+    margin: 0 100px 50px 100px;
+}
+
+h3 {
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 1em;
+    width: 70%;
+    margin: 2em auto;
+    background-color: #40A4B0;
+    color: black;
+    text-align: center;
+}
+h4,h5 {
+    font-family: cursive;
+}
+a {
+    color: black;
+}
+/************************************************************Header************************************************/
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+#photo{
+    margin-right: auto;
+}
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: auto auto auto 0;
+}
+
+.name {
+    font-size: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.metier {
+    font-size: 1.5em;
+    font-style: italic;
+}
+/*********************************************************Main************************************************/
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+}
+.icone {
+    width: 30px;
+    height: 30px;
+    margin: 0 1em;
+}
+
+/********************************************************gauche**********************************************/
+
+aside {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    border-right: 5px solid #40A4B0;
+}
+.aside-title {
+    font-weight: 1.5em;
+    text-align: center;
+}
+.bloc-competence {
+    margin: 1em;
+    
+
+    border-right:#40A4B0 5px solid;
+    border-bottom: #40A4B0 5px solid;
+    padding: 1em;
+    transition: 1s;
+}
+/*********************************************************droite********************************************/
+.right-side {
+    background-color: lightgrey;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3em;
+}
+.title-projet {
+    font-size: 1.5em;
+
+}
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 1em;
+    justify-content: center;
+    gap: 1em;
+}
+.projet {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    text-align: center;
+    margin: auto;
+    gap: 2em;
+   
+}
+.projet img {
+    height: 12em;
+    width: 22em;
+    border-radius: 10px;
+}
+.projet img:hover{
+    transform: rotate(5deg);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.competence-ul {
+    display: none;
+}
+.info-icone {
+    cursor: pointer;
+}
+.active {
+    display: block;
+    /*opacité de 0 à 1*/
+    animation: fade 2s;
+}
+/**animation fondu**/
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.poste-date {
+    margin: auto;
+    text-align: center;
+}
+.formation {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.lieu {
+    text-align: center;
+    font-family: cursive;
+}
+.complement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*******media query en dessous de 768 px*********/
+
+@media screen and (max-width: 768px){
+    body {
+        margin:auto;
+    }
+    main {
+        display: block;
+    }
+    .right-side {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        border: none;
+    }
+    .projet img:hover{
+        transform: none;
+    }
+    .projet img {
+        width: 20em;
+    }
+
+}
