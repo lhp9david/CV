@@ -111,6 +111,11 @@ aside {
     font-size: 1.5em;
 
 }
+.tech {
+    font-size: 0.5em;
+    margin: 0;
+    padding: 0;
+}
 .projets {
     display: flex;
     flex-wrap: wrap;
