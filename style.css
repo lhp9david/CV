@@ -145,6 +145,9 @@ aside {
 .competence-ul {
     display: none;
 }
+.icone {
+    transition: transform 0.5s ease;
+}
 .info-icone {
     cursor: pointer;
 }
@@ -161,6 +164,10 @@ aside {
     to {
         opacity: 1;
     }
+}
+
+.rotate {
+    transform: rotate(30deg); 
 }
 
 .poste-date {
